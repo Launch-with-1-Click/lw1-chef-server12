@@ -1,0 +1,8 @@
+*.sw[a-z]
+env.sh
+env2.sh
+.vagrant/
+/tmp/
+.rvmrc
+cookbooks/
+/ec2_amazon-ebs.pem
