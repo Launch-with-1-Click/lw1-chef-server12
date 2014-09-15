@@ -1,0 +1,14 @@
+SITE
+  remote: https://supermarket.getchef.com/api/v1
+  specs:
+    simplelog_handler (1.0.0)
+
+PATH
+  remote: site-cookbooks/lw1_chefserver12
+  specs:
+    lw1_chefserver12 (0.1.0)
+
+DEPENDENCIES
+  lw1_chefserver12 (>= 0)
+  simplelog_handler (>= 0)
+

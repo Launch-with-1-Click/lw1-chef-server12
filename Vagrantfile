@@ -36,13 +36,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.pty = true
 
   config.vm.provision :shell, :path => "bootstrap.sh"
-#   config.vm.provision :shell, :path => "bootstrap.sh"
-# 
-#   config.vm.provision :chef_solo do |chef|
-#     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
-#     chef.add_recipe 'simplelog_handler::default'
-#     chef.add_recipe 'lw1_gitbucket::settings'
-#     chef.add_recipe 'lw1_gitbucket::nginx_proxy'
-#     chef.add_recipe 'lw1_gitbucket::set_initiaize'
-#   end
+  config.vm.provision :chef_solo do |chef|
+    chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
+    chef.add_recipe 'simplelog_handler::default'
+    chef.add_recipe 'lw1_chefserver12::default'
+  end
 end

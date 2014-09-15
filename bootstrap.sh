@@ -7,6 +7,11 @@ sudo yum install git -y
 ## CONSTS
 SETUP_DIR=/opt/lw1/setup
 
+## Skip for provisioning test
+if [ -d ${SETUP_DIR} ] ; then
+  exit 0
+fi
+
 ## Small Defs
 
 function _get_pkgcloud() {
